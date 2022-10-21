@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+body {
+    background-color: rgba(20, 5, 5, 0.995);
+}
+
+
+.container {
+    background-image: url("../img/background.jpg");
+    background-size: contain;
+    max-width: 600px;
+    min-height: 928px;
+    background-repeat: no-repeat;
+    background-color: aqua;
+    margin: auto;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* HEADER */
+.navigation__ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    position: relative;
+    animation: moveDown 2s;
+
+}
+
+.navigation__ul li a {
+    color: rgb(188, 150, 103);
+    /* color: rgb(192, 166, 141); */
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Caveat', cursive;
+}
+
+.navigation__ul li a:hover {
+    color: rgb(150, 77, 14);
+}
+
+
+/* HEADING */
+
+.container-heading {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    animation: moveThrough 3s;
+
+}
+
+.container-heading__main {
+    font-size: 3.6rem;
+    text-transform: uppercase;
+
+
+}
+
+.container-heading__sub {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+
+
+}
+
+@keyframes moveThrough {
+    0% {
+        transform: scale(.1, .1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(-40px);
+
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* FOOTER */
+.footer {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.footer a {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+
+
+}
+
+.copyright {
+    color: white;
+    margin-top: 1rem;
+
+}
+
+
+/* NARUČIVANJE */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 12rem;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+form input {
+    color: black;
+    width: 20rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    font-size: 1.8rem;
+    border-radius: 5px;
+    margin-bottom: .5rem;
+    padding: .5rem;
+}
+
+form input::placeholder {
+    color: red;
+    font-weight: 500;
+}
+
+form input:focus {
+    outline: none;
+}
+
+form a {
+    color: black;
+    border: 1px solid black;
+    padding: 1rem 5rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 0 auto;
+    border-radius: 5px;
+    font-size: 2rem;
+
+
+
+
+}
+
+form label {
+    margin-bottom: .5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+#napomena {
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 1rem;
+
+
+
+
+
+}
+
+/* PULSATE */
+.pulsate {
+    animation: pulsate 2s infinite;
+
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1, 1);
+        box-shadow: none;
+    }
+
+    60% {
+        transform: scale(1.1, 1.1);
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+
+
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+/* ABOUT */
+
+.container__text {
+    margin-top: 3rem;
+    padding: 3rem;
+
+}
+
+.container__text p {
+    color: white;
+    font-size: 1.3rem;
+    position: relative;
+
+
+}
+
+.container__text hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: .7rem dotted white;
+    width: 3rem;
+}
+
+.container-dark {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+/* ABOUT AUTOHOR */
+.container__textA {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.container__textA p {
+    max-width: 28rem;
+    font-size: 1.6rem;
+}
+
+.container__textA img {
+    width: 200px;
+
+    border-radius: 10px;
+
+}
+
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    .container {
+        background-image: url("../img/background.jpg");
+        background-size: cover;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: auto;
+        position: relative;
+    }
+
+    .container__textA {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+
+    }
+
+    .container__textA p {
+        margin-top: 3rem;
+    }
+
+    .container__textA img {
+        width: 140px;
+        border-radius: 10px;
+
+    }
+
+}
+
+
+/* UPOZORENJE */
+.upozorenje {
+    background-color: rgb(234, 172, 172);
+    animation: pulsate 1s infinite;
+}
